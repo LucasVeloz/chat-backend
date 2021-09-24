@@ -10,6 +10,11 @@ interface Props {
 
 
 const app = express();
+
+app.get('/', (_, response) => response.send({
+  message: 'deu bom'
+}))
+
 const serverHttp = http.createServer(app);
 const io = new Server(serverHttp, {
   cors: {
