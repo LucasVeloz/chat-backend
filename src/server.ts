@@ -8,6 +8,8 @@ interface Props {
   message: string;
 }
 
+const PORT = process.env.PORT || 3333;
+
 
 const app = express();
 
@@ -45,4 +47,4 @@ io.on('connection', (socket) => {
 
 
 
-serverHttp.listen(3333, () => console.log('Server is running! 🚀'))
+serverHttp.listen(PORT, () => console.log('Server is running! 🚀'))
